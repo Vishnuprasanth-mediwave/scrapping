@@ -1,4 +1,4 @@
-const { handleScrap } = require("../scrap");
+const { handleScrap } = require("../helper/scrap");
 const { sequelize, models, Sequelize } = require("../config/sequelize-config");
 
 const scrapingController = async (req, res, next) => {

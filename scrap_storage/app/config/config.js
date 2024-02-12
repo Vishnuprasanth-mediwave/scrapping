@@ -15,6 +15,7 @@ const envConfigs = {
   uat: { ...dbConfig },
   port: process.env.PORT,
   host: process.env.HOST,
+  searchurl: process.env.SEARCH_URL,
   jwtSecret: "training-secret",
   fileSavePath: process.env.FILE_STORAGE_PATH,
 };

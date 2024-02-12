@@ -1,7 +1,7 @@
 const { handleScrap } = require("../scrap");
 const { sequelize, models, Sequelize } = require("../config/sequelize-config");
 
-const scrapingController = async (req, res, next) => {
+const searchController = async (req, res, next) => {
   try {
     const scrapList = await handleScrap();
     if (scrapList) {
@@ -32,4 +32,4 @@ const scrapingController = async (req, res, next) => {
   }
 };
 
-module.exports = { scrapingController };
+module.exports = { searchController };

@@ -2,13 +2,13 @@ const express = require("express");
 const config = require("./config/config");
 const { models, Sequelize } = require("./config/sequelize-config");
 
-const { scrapingController } = require("./controller/fetch.controller");
+const { searchController } = require("./controller/search.controller");
 const { errorHandler } = require("./middlewares/errorHandler.middleware");
 
 const app = express();
 
 // Define a route handler for your Puppeteer logic
-app.get("/", scrapingController);
+app.get("/", searchController);
 app.use(errorHandler);
 
 // Start the server and listen on port 3000

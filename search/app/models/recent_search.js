@@ -1,6 +1,6 @@
 module.exports = function model(sequelize, DataTypes) {
-  const Scrap_details = sequelize.define(
-    "scrap_details",
+  const Recent_search = sequelize.define(
+    "recent_search",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -21,10 +21,10 @@ module.exports = function model(sequelize, DataTypes) {
       },
     },
     {
-      tableName: "scrap_details",
+      tableName: "recent_search",
       timestamps: false,
     }
   );
 
-  return Scrap_details;
+  return Recent_search;
 };
