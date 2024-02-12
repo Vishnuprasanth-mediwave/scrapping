@@ -4,7 +4,7 @@ const puppeteer = require("puppeteer");
 const handleScrap = async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto("https://news.ycombinator.com/");
+  await page.goto("https://news.ycombinator.com/?p=2");
 
   let scrapList = await page.evaluate(() => {
     const titleList = document.body.querySelectorAll(".athing");
@@ -15,6 +15,7 @@ const handleScrap = async () => {
       const parentTr = titleElement.closest("tr");
       const ageElement = parentTr.nextElementSibling.querySelector(".age");
       const utcTime = ageElement.title.trim();
+      const ISTDate = new Date(ageElement.title);
 
       const data = {
         id: titleElement.id,
